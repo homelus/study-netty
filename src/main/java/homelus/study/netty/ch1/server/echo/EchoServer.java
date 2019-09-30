@@ -1,4 +1,4 @@
-package homelus.study.netty.ch1.echo;
+package homelus.study.netty.ch1.server.echo;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -16,11 +16,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class EchoServer {
     public static void main(String[] args) throws InterruptedException {
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
-        EventLoopGroup workerGoup = new NioEventLoopGroup();
+        EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
             ServerBootstrap b = new ServerBootstrap();
-            b.group(bossGroup, workerGoup)
+            b.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         protected void initChannel(SocketChannel ch) throws Exception {
@@ -31,7 +31,7 @@ public class EchoServer {
             ChannelFuture f = b.bind(8888).sync();
             f.channel().closeFuture().sync();
         } finally {
-            workerGoup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
     }

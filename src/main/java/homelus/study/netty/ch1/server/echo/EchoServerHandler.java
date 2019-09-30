@@ -1,4 +1,4 @@
-package homelus.study.netty.ch1.echo;
+package homelus.study.netty.ch1.server.echo;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

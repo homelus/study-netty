@@ -1,4 +1,4 @@
-package homelus.study.netty.ch1.discard;
+package homelus.study.netty.ch1.server.discard;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
