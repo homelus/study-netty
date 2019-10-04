@@ -6,11 +6,11 @@
 목표
 
 1. Java NIO 를 이해한다.
-    - NIO 에서 사용하는 ByteBuffer, Channel 에 대한 개념
+    - NIO 에서 사용하는 ByteBuffer, Channel 에 대한 개념을 공부한다.
 
 2. Netty 의 코드를 이해한다.
     - 더 좋은 코드를 만들기 위한 패턴을 공부한다.
-
+    - EventLoop 를 공부한다.
 
 <hr>
 
