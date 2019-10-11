@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
 public class EchoClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        String sendMessage = "Hello Netty!";
+        String sendMessage = "Hello Netty.md!";
 
         ByteBuf messageBuffer = Unpooled.buffer();
         messageBuffer.writeBytes(sendMessage.getBytes());
