@@ -1,4 +1,4 @@
-package homelus.study.netty;
+package homelus.study.netty.ch6;
 
 import org.junit.jupiter.api.Test;
 
